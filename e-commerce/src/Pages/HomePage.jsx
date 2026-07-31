@@ -1,5 +1,4 @@
 // Styles
-import '../styles/general.css';
 import '../styles/header.css';
 import '../styles/HomePage.css';
 
