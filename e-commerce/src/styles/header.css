@@ -147,3 +147,7 @@
   width: 26px;
   text-align: center;
 }
+
+.header-link.active {
+  backdrop-filter: brightness(1.5);
+}

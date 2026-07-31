@@ -1,17 +1,20 @@
 // Styles
-import '../styles/checkout/checkout-header.css';
-import '../styles/checkout/checkout.css';
+import '../../styles/checkout/checkout.css';
 
 // Components
-import { HeaderComponent } from '../Components/HeaderComponent.jsx';
+import { CheckoutPageHeaderComponent } from './CheckoutPageHeaderComponent.jsx';
+
+// favicon
+import favicon from "../../assets/images/Favicons/cart-favicon.png";
 
 export function ChackoutPage() {
     return (
         <>
 
             <title>Checkout</title>
+            <link rel="icon" href={favicon} />
 
-            <HeaderComponent />
+            <CheckoutPageHeaderComponent />
 
             <div className="checkout-page">
                 <div className="page-title">Review your order</div>
