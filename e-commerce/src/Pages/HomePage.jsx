@@ -1,8 +1,11 @@
+// React
+import React from "react";
+
 // axios
 import axios from "axios";
 
 // data
-import { products } from '../../data/products.js';
+// import { products } from '../../data/products.js';
 
 // Components
 import { HeaderComponent } from '../Components/HeaderComponent.jsx';
@@ -16,9 +19,14 @@ import favicon from "../assets/images/Favicons/home-favicon.png";
 
 export function HomePage() {
 
-    axios.get('http://localhost:3000/api/products').then((response) => {
-        console.log(response.data)
-    });
+    let [products, setProducts] = React.useState([]);
+
+    React.useEffect(() => {
+        axios.get('http://localhost:3000/api/products').then((response) => {
+            console.log(response.data);
+            setProducts(response.data);
+        });
+    }, []);
 
     return (
         <>
