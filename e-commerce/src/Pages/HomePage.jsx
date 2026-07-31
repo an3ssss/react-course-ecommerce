@@ -1,3 +1,6 @@
+// axios
+import axios from "axios";
+
 // data
 import { products } from '../../data/products.js';
 
@@ -12,6 +15,11 @@ import '../styles/HomePage.css';
 import favicon from "../assets/images/Favicons/home-favicon.png";
 
 export function HomePage() {
+
+    axios.get('http://localhost:3000/api/products').then((response) => {
+        console.log(response.data)
+    });
+
     return (
         <>
 
